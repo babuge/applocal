@@ -1,0 +1,17 @@
+All input files are considered out-of-date for incremental task ':processDebugResources'.
+Starting process 'command 'D:\Program Files\androidSDK\build-tools\28.0.3\aapt.exe''. 
+Working directory: D:\github\applocal\platforms\android Command:
+ D:\Program Files\androidSDK\build-tools\28.0.3\aapt.exe package -f --no-crunch -I 
+ D:\Program Files\androidSDK\platforms\android-23\android.jar -M 
+ D:\github\applocal\platforms\android\build\intermediates\manifests\full\debug\AndroidManifest.xml -S 
+ D:\github\applocal\platforms\android\build\intermediates\res\merged\debug -A 
+ D:\github\applocal\platforms\android\build\intermediates\assets\debug -m -J 
+ D:\github\applocal\platforms\android\build\generated\source\r\debug -F 
+ D:\github\applocal\platforms\android\build\intermediates\res\resources-debug.ap_ --debug-mode --custom-package com.babuge.bbgapp.localtion -0 apk --output-text-symbols 
+ D:\github\applocal\platforms\android\build\intermediates\symbols\debugSuccessfully started process 'command 'D:\Program Files\androidSDK\build-tools\28.0.3\aapt.exe'
+ 'Unknown source file :       
+ Unable to add 'D:\github\applocal\platforms\android\build\intermediates\
+ assets\debug\www\lib\time-pickerHq\node_modules\semver\semver.browser.js.gz':
+  file already in archive (try '-u'?)
+
+Unknown source file : ERROR: unable to process assets while packaging 'D:\github\applocal\platforms\android\build\intermediates\res\resources-debug.ap_'
