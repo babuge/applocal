@@ -1,0 +1,19 @@
+.tab-chats{
+    background-color: #eee;
+}
+.myColor .spinner {
+    stroke: #ef473a;
+    fill: #ef473a;
+}
+.myColor .icon-pulling{
+    color:#ef473a;
+}
+.myColor .icon{
+    color:#ef473a;
+}
+.myColor .text-pulling{
+    color:#ef473a;
+}
+.myColor .text-refreshing{
+    color:#ef473a;
+}

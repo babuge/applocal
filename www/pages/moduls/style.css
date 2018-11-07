@@ -1,0 +1,97 @@
+/* Empty. Add your own CSS if you like */
+
+
+/* 自定义公共样式 */
+
+.paddingNone {
+    padding: 0;
+}
+
+.marginNone {
+    margin: 0;
+}
+.borderNone {
+    border:none;
+}
+.air-bg{
+    background-color: transparent;
+}
+.mydiv {
+    background-color: #f00;
+}
+[nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar,.bar.bar-stable{
+    background-image: url("../../img/header.jpg");
+    border:none;
+    color:#FFF;
+}
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar,.bar.bar-stable {
+    background-image: url("../../img/header.jpg");
+    border:none;
+    color:#FFF;
+}
+.bar.bar-stable .title {
+    color: #FFF;
+}
+.bar-stable .button.button-clear{
+    color:#FFF;
+}
+
+/*baidu 隐藏标识*/
+.anchorBL{display:none;}
+
+/*常用图标*/
+.myIcon::before{
+    content: "";
+    display: block;
+    width:100%;
+    height:100%;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.myIcon.bbg-baidu::before{
+    background-image:url("../../img/baidu.png");
+}
+.myIcon.bbg-amap::before{
+    background-image: url('../../img/amap.png');
+}
+.myIcon.bbg-rongcloud::before{
+    background-image: url("../../img/rongyun.png");
+}
+.myIcon.bbg-ip::before{
+    background-image: url("../../img/ip.png");
+}
+.myIcon.bbg-echarts::before{
+    background-image: url("../../img/echarts.png");
+}
+.myIcon.bbg-popup::before{
+    background-image: url("../../img/warning.png");
+}
+/* 自定义loading */
+
+.bbgBackDrop {
+    top: 44px;
+    background-color: rgba(0,0,0,0.3)
+}
+
+.bbgLoading {
+    background: transparent;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    /* margin: -10px; */
+    margin-bottom: 0;
+    padding:10px;
+    border-radius: 8px;
+}
+
+.bbgLoading .value {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    height: 46px;
+}
+

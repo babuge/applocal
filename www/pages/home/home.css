@@ -1,0 +1,15 @@
+.pageHome {
+    background-color: #252525;
+    color: #FFF;
+}
+.pageHome .imgStyle{
+    display: inline-block;
+    width:32px;
+    height:32px;
+}
+.pageHome .imgBar{
+    line-height: 0px;
+    padding-bottom:4px;
+    font-size: 32px;
+}
+/* test */

@@ -1,0 +1,31 @@
+
+<ion-view view-title="聊天" hide-back-button="true" class="IMRongCloud">
+    <ion-nav-buttons side="left" style="text-align: center;background-color: #EF473A">
+        <goback-Button ng-click="$ionicGoBack()"></goback-Button>
+    </ion-nav-buttons>
+  <ion-content class="has-header" scroll="false">
+      <ion-list ng-if="clickPool.showList">
+        <ion-item ng-repeat="item in userList | orderBy : 'id' : ture" class='item-icon item-icon-right' ng-click="selectItem(item)">
+            name: {{item.userName}}
+            <i class="icon ion-ios-checkmark-outline" style="color:#888"></i>
+        </ion-item>
+      </ion-list>
+      <ion-scroll ng-if="!clickPool.showList" style="height: 100%;width: 100%" direction="y" scrollbar-x="false" scrollbar-y="false" class="IMScroll">
+        <div class="item borderNone paddingNone air-bg" >
+            <div class="row">
+                <div class="col" ng-style="{'max-height':'70%','text-align':'right','background-color':'#Fc5'}">who are you?</div>
+                <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>                   
+                <div class="col" ng-style="{'background-color':'transparent'}"></div>
+            </div>
+        </div>
+        <div class="item borderNone paddingNone air-bg">
+            <div class="row">
+                <div class="col" ng-style="{'background-color':'transparent'}"></div>
+                <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+                <div class="col" ng-style="{'max-height':'70%','text-align':'left','background-color':'#FFF'}">is Me</div>
+            </div>
+        </div>
+      </ion-scroll>
+      
+  </ion-content>
+  </ion-view>

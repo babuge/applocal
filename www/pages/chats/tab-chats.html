@@ -1,0 +1,34 @@
+<ion-view view-title="Chats" class="tab-chats">
+  <ion-content overflow-scroll="false">
+      <ion-refresher 
+      pulling-text="下拉刷新" 
+      on-refresh="doRefresh()"
+      immediate-check="false"
+      spinner="lines" class="myColor assertive" ></ion-refresher>
+      <div style="background:#dedede;" class="text-center padding">FOOL</div>
+    <ion-list >
+       <!-- <div class="mydiv">12312121212111111111111111111111</div> -->
+      <!-- <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item> -->
+      <ion-item collection-repeat="x in chats  | orderBy : '-id' | limitTo: 100 "  type="item-text-wrap" href="#/tab/chats/{{x}}">
+        <div class="padding text-center">{{"item"+x.id}}</div>
+      </ion-item>
+    </ion-list>
+    
+    
+    <div class="allBottomBar text-center assertive" ng-if="showEndMessage">
+        页面到底了，没有更多数据了！
+    </div>
+
+    <ion-infinite-scroll on-infinite="loadMore()" immediate-check="false" ng-if="hasMoreDateLoad" spinner="lines" class="myColor assertive" distance="1%"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

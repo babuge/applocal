@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>八部阁定位</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"> -->
+    <link rel="manifest" href="manifest.json">
+    <!-- un-comment this code to enable service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('service worker installed'))
+                .catch(err => console.log('Error', err));
+        }
+
+        if ('serviceWorkerContainer' in navigator) {
+            navigator.serviceWorkerContainer.register('service-worker.js')
+                .then(function(){console.log('service worker installed')})
+                .catch(function(err){console.log('Error', err)});
+        }
+    </script>
+    
+    <link href="./lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="./pages/moduls/style.css" rel="stylesheet">
+    <script src="./lib/angular/angular.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="./lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="./lib/angular-css/angular-css.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="./cordova.js"></script>
+    <script src="./lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="./pages/moduls/app.js"></script>
+    <script src="./pages/moduls/controllers.js"></script>
+    <script src="./pages/moduls/directives.js"></script>
+    <script src="./pages/moduls/values.js"></script>
+    <script src="./lib/ol.js"></script>
+    <script src="./pages/moduls/services.js"></script>
+    <script src="./lib/time-pickerHq/dist/time-hq.bundle.min.js"></script>
+    <script src="./lib/crypto-js/crypto-js.js"></script>
+ 
+    <script src="./pages/account/tabaccount.js"></script>
+
+    <script src="./pages/chats/tabchats.js"></script>
+    <script src="./pages/chats/detail/chatDetail.js"></script>
+
+    <script src="./pages/home/home.js"></script>
+    <script src="./pages/home/baiduMap/baidumap.js"></script>
+    <script src="./pages/home/faceContrast/faceContrast.js"></script>
+    <script src="./pages/home/popup/popup.js"></script>
+    <script src="./pages/home/amap/amap.js"></script>
+    <script src="./pages/home/IMRongCloud/IMRongCloud.js"></script>
+    <script src="./pages/home/ipAddress/ipAddress.js"></script>
+    <script src="./pages/home/echarts/echarts.js"></script>
+</head>
+
+<body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+    <script>
+        var lg = console.log;
+    </script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=04gjnbv6m3HD5U14g6k9UQCVPLXxXmx1"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.10&key=4609619289bbb018b882864cf08adcbf"></script>
+    <script src="lib/echarts.min.js"></script>
+</body>
+
+</html>

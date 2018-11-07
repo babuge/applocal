@@ -1,0 +1,19 @@
+<div class="hq-scrollBox">
+    <div class="hqTitle">时间选择</div>
+    <div class="hqMasking">
+        <div class="top"></div>
+        <div class="center"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="row hq-row">
+        <div class="col hq-col" ng-style="{'max-width':itemLength}" ng-repeat="item in itemArray">
+            <ion-scroll direction='y' paging="false" scrollbar-x="false" scrollbar-y="false" has-bouncing="false"  class="hq-scrollBar" >
+                <div class="hq-content" ng-repeat="x in item.value">{{x}}</div>
+            </ion-scroll>
+            <ion-scroll direction='y' paging="false" on-scroll="scrollIng($index,'hq-scrollBar',item.name)" scrollbar-x="false" scrollbar-y="false" has-bouncing="false"  class="hq-scrollBar touch">
+                <div class="hq-touchPanel" ng-style="{'height': item.value.length*40 + 'px'}"></div>
+            </ion-scroll>
+        </div>
+    </div>
+   
+</div>

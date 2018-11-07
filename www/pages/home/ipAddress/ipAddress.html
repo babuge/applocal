@@ -1,0 +1,17 @@
+
+<ion-view view-title="IP" hide-back-button="true" class="IpAddress">
+    <ion-nav-buttons side="left" style="text-align: center;background-color: #EF473A">
+        <goback-Button ng-click="$ionicGoBack()"></goback-Button>
+    </ion-nav-buttons>
+  <ion-content class="has-header" scroll="true">
+      <ion-list>
+            <ion-item ng-repeat="(key,value) in ipAddress">
+                <div class="row paddingNone">
+                    <div class="col paddingNone">{{key | ipKeyName}}</div>
+                    <div class="col paddingNone text-right">{{value}}</div>
+                </div>
+            </ion-item>
+      </ion-list>
+      
+  </ion-content>
+  </ion-view>

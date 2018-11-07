@@ -1,0 +1,18 @@
+
+<ion-view view-title="Echarts" hide-back-button="true" class="echarts">
+    <ion-nav-buttons side="left" style="text-align: center;background-color: #EF473A">
+        <goback-Button ng-click="$ionicGoBack()"></goback-Button>
+    </ion-nav-buttons>
+  <ion-content class="has-header" scroll="true">
+    <div class="echartsBar">
+        <bbg-echarts echartsinit={{echartsDot}} ></bbg-echarts>
+    </div>
+    <br/>
+    <div class="echartsBar">
+            <bbg-echarts echartsinit={{echartsBar}} ></bbg-echarts>
+    </div>
+    <div class="echartsBar" style="height: 240px;">
+        <bbg-echarts echartsinit={{echartsPie}} height="240"></bbg-echarts>
+    </div>
+  </ion-content>
+</ion-view>

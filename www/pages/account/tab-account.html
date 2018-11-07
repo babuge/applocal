@@ -1,0 +1,15 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <ion-item>
+      <div class="button button-full calm" ng-click="getInfo(1)">review</div>
+      <div class="button button-full calm" ng-click="getInfo(2)">back review</div>   
+      <div class="button button-full calm" ng-click="getInfo(3,city,number)">{{(city||"城市")+(number||"")}}</div>     
+      <div class="padding" style="background:#dedede;"><input type="text" maxlength="12" ng-model="city" /></div>
+      <div  class="padding" style="background:#dedede;"><input type="number" maxlength="12" ng-model="number" /></div>
+    </ion-item>
+
+    </ion-list>
+    <div id="map" style="height:500px;"></div>
+  </ion-content>
+</ion-view>

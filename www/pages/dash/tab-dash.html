@@ -1,0 +1,35 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>百度经纬度校验（ {{title}} ）</h2>
+    <div>
+      <button class="button button-calm buttom-full" ng-click="getGps()">点击获取定位信息</button>
+    </div>
+    <div>转换前</div>
+    <div class="row">
+      <div class="col">lon:</div>
+      <div class="col">{{preLon}}</div>
+    </div>
+    <div class="row">
+      <div class="col">lat:</div>
+      <div class="col">{{preLat}}</div>
+    </div>
+    <div>转换后</div>
+    <div class="row">
+      <div class="col">lon:</div>
+      <div class="col">{{aftLon}}</div>
+    </div>
+    <div class="row">
+      <div class="col">lat:</div>
+      <div class="col">{{aftlat}}</div>
+    </div>
+    <div>再回转</div>
+    <div class="row">
+      <div class="col">lon:</div>
+      <div class="col">{{reLon}}</div>
+    </div>
+    <div class="row">
+      <div class="col">lat:</div>
+      <div class="col">{{relat}}</div>
+    </div>
+  </ion-content>
+</ion-view>

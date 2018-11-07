@@ -1,0 +1,165 @@
+.time-hq .font_28px {
+    font-size: 28px;
+}
+
+.time-hq .margin_zero {
+    margin: 0;
+}
+
+.time-hq .padding_zero {
+    padding: 0;
+}
+
+.time-hq .popup {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.time-hq .popup-head {
+    display: none;
+}
+
+.time-hq .popup-body {
+    padding: 0;
+}
+
+.time-hq .popup-buttons {
+    padding: 0;
+    min-height:50px;
+    height:50px;
+}
+
+.time-hq .popup-buttons .button:not(:last-child) {
+    margin-right: 1px;
+}
+
+.time-hq .padding_left_15px {
+    padding-left: 15px;
+}
+
+.time-hq .heading {
+    height: 44px;
+    background-color: #009688;
+    color: #ffffff;
+    text-align: center;
+    line-height: 44px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.time-hq .time_picker_colon {
+    padding-top: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.time-hq .time_picker_arrows {
+    width: 100%;
+}
+
+.time-hq .time_picker_box_text {
+    height: 40px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+.time-hq .overflowShow {
+    white-space: normal !important;
+}
+
+.time-hq .button_set,
+.time-hq .button_close {
+    background-color: #009688;
+    color: #ffffff;
+}
+
+.time-hq .hq-scrollBox {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.time-hq .hq-row {
+    width: 100%;
+    padding: 0;
+    height: 120px;
+    max-height: 120px;
+    min-height: 120px;
+}
+.time-hq .hq-col {
+    height: 120px;
+    max-height: 120px;
+    min-height: 120px;
+    position: relative;
+    top:0;
+    padding: 0;
+}
+.time-hq .hq-scrollBar {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.time-hq .hq-scrollBar.touch{
+    z-index: 5;
+}
+
+.time-hq .hq-scrollBox .hqTitle {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-bottom:1px solid #EEE;
+}
+.time-hq .hqMasking{
+    width: 100%;
+    height: 0;
+    position: relative;
+    top:0;
+    left: 0;
+    padding: 0 5px;
+    padding-top:1px;
+}
+.time-hq .hqMasking .top,
+.time-hq .hqMasking .bottom,
+.time-hq .hqMasking .center{
+    width: calc(100% - 10px);
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    z-index: 3;
+}
+.time-hq .hqMasking .top{
+    top: 0;
+    background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,.5),rgba(255,255,255,0));
+}
+.time-hq .hqMasking .bottom{
+    top: 80px;
+    background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0.8));
+}
+.time-hq .hqMasking .center{
+    top: 40px;
+    border-top:1px solid rgba(225,225,225,0.8);
+    border-bottom:1px solid rgba(225,225,225,0.8);
+}
+.time-hq .hq-scrollBox .hq-content {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FFF;
+    text-align: center;
+}
+.time-hq .hq-scrollBox .hq-touchPanel {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    cursor: pointer;
+}

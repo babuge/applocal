@@ -1,0 +1,17 @@
+ion-view[view-title="聊天"].IMRongCloud{
+    background-color:#f5f5f5;
+}
+.IMRongCloud .IMScroll{
+    position: relative;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+}
+.IMRongCloud .IMScroll .scroll{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+}

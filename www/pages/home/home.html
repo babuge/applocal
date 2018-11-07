@@ -1,0 +1,19 @@
+<ion-view view-title="主阁" class="pageHome" >
+    <ion-content class="padding has-header" scroll="true">
+        <ion-list>
+            <div class="bbgItems" ng-repeat="items in homeItemInfo track by items.pid">
+                <span ng-if="items.show">
+                <div class="title"></div>
+                <div class="cont" >
+                    <div class="row paddingNone">
+                        <div class="col-25 paddingNone" ng-repeat="item in items.items track by item.id" ng-click="gotoModule(item.id)">
+                            <div class="imgBar text-center"><i class="imgStyle {{item.cssClass}} "></i></div>
+                            <div class="title text-center">{{item.title || "模块一"}}</div>
+                        </div>
+                    </div>
+                </div>
+                </span>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+
+<ion-view view-title="人脸对比" hide-back-button="true" class="facecontrast">
+  <ion-nav-buttons side="left" style="text-align: center;background-color: #EF473A">
+      <goback-Button ng-click="$ionicGoBack()"></goback-Button>
+  </ion-nav-buttons>
+<ion-content class="has-header" scroll="true">
+      <div class="item" style="background: transparent;border: none;"><select style="border:none;background: transparent;border: none;" ng-options="option.name for option in selectUsers track by option.id" ng-model="selectUsersEd" ng-change="changeName(selectUsersEd)"></select></div>
+      <div class="item item-complex" style="background: transparent;border: none;">
+        <div class="row">
+          <div class="col col-100 text-center" style="height: 150px;width: auto">
+            <img ng-src="data:image/JPEG;base64,{{original}}" style="height: 100%;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-center">
+            <button class="button button-full button-positive" ng-click="faceContrast()">camera</button>
+          </div>
+          <div class="col col-50 text-center">
+            <button class="button button-full button-positive" ng-click="faceButton()">localImage</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-center"  style="height: 150px;width: auto">
+            <img  ng-src="data:image/JPEG;base64,{{original}}" style="height: 100%;">
+          </div>
+          <div class="col col-50 text-center"  style="height: 150px;width: auto">
+              <img  ng-src="data:image/JPEG;base64,{{updateImage}}" style="height: 100%;">
+            </div>
+        </div>
+        <div class="item-complex item-text-wrap padding" style="background-color: transparent;border:none">
+            <p style="font-size: 16px;color:#000">{{endData.confidence?("confidence(置信度):"+endData.confidence):''|| ''}}</p>
+            <p style="font-size: 16px;color:#000">{{endData.thresholds?("thresholds(置信度分类阈值):"+endData.thresholds):'' || ''}}</p>
+            <p style="font-size: 16px;color:#000">{{endData.rectA?("rectA(图片左矩形):"+endData.rectA):'' || ''}}</p>
+            <p style="font-size: 16px;color:#000">{{endData.rectA?("rectB(图片右矩形):"+endData.rectB):''|| ''}}</p>
+        </div>
+        <div class="padding">[60.03, 67.05, 75.45]</div>
+        <div class="padding">49%,18%,6.7%</div>
+      </div>
+</ion-content>
+</ion-view>
