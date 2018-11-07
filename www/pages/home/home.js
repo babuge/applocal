@@ -117,7 +117,7 @@ angular.module('starter.controllers').controller('HomeCtrl', function($scope,$st
 
     // 跳转事件集
     $scope.gotoModule = function(idx) {
-        if(idx>8){
+        if(idx>8 || idx==5){
             console.log('该模块尚未开发！')
             return;
         }

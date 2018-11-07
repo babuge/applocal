@@ -331,9 +331,7 @@ angular.module('starter.directives',[])
             link: function(scope,element,attrs){
                 scope.newAttrs = null;
                 // ----订阅
-                console.log(attrs)
                 attrs.$observe("amapinit", function (value) {
-                    console.log(value)
                     if(value.length>0){
                         scope.newAttrs = JSON.parse(value);
                         mapInit();
@@ -363,7 +361,6 @@ angular.module('starter.directives',[])
             replace: true,
             scope:true,
             link: function(scope,element,attrs){
-                console.log(attrs.height)
                 if(!!attrs.height){
                     element[0].style.height=attrs.height+"px";
                 }

@@ -59,7 +59,7 @@ angular.module('starter.controllers').controller('FaceContrast', function($scope
      // 获取本地图片
      $http({
       method: "get",
-      url: 'img/babugehudong.jpg',
+      url: 'img/babuge.jpg',
       responseType: 'arraybuffer'
     }).then(function(res){
      $scope.original = ImageServes.arrayBufferToBase64(res.data);

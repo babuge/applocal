@@ -557,17 +557,17 @@ angular.module('starter.services', [])
 }])
 .factory('hintService',['$cordovaToast','$ionicPopup',function($cordovaToast,$ionicPopup){
   var log = function(msg){
-    console.log('该提示（$cordovaToast）不可用！android8出现通知权限关闭影响问题');
+    console.log('提示，目前（$cordovaToast）不可用！');
     var myPopup = $ionicPopup.show({
       title: '',
       template:'<span>'+msg+'</span>',
-      scope: $scope,
       buttons: [
         {
           text: '<b>知道了</b>',
           type: 'button-calm',
           onTap: function(e) {
            // do something
+           myPopup.close()
           }
         },
       ]

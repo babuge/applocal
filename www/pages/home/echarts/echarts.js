@@ -123,7 +123,7 @@ angular.module('starter.controllers').controller('EchartsCtrl', function ($scope
             title:{
                 text: 'upChart',
                 x: 'center',
-                top:15
+                top:5
             },
             grid:{
                 left: 60,
@@ -158,6 +158,7 @@ angular.module('starter.controllers').controller('EchartsCtrl', function ($scope
                     }],
                 y: 'bottom', // [top],bottom,center (number) 
                 x:  'center', // [center],left,right (number)
+                bottom:20,
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(178,34,34,0.0)',
                 padding: 10,
@@ -227,7 +228,7 @@ angular.module('starter.controllers').controller('EchartsCtrl', function ($scope
         title:{
             text: 'pie',
             x: 'center',
-            top:-5
+            top:0
         },
         tooltip:{},
         grid:{
