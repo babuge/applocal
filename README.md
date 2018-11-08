@@ -5,8 +5,8 @@ angularjs、ionic、cordova
   2.通过空闲时间扩展应用功能，达到学以致用的目的。
   
 ### install
-  node 6.11.0，cordova@6.0，ionic@2.2.3
-  npm install
+  node 6.11.0，cordova@6.0，ionic@2.2.3 <br>
+  npm install <br>
   run： ionic serve
   
   
