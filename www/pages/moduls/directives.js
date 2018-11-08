@@ -354,13 +354,14 @@ angular.module('starter.directives',[])
             }
         }
     }])
-    .directive('bbgEcharts',function(){
+    .directive('bbgEcharts',function(){ // echarts 模版
         return {
             restrict: "E",
-            template: '<div id="echarts" style="width:100%;height:200px"></div> ',
+            template: '<div  style="width:100%;height:200px"></div> ',
             replace: true,
             scope:true,
             link: function(scope,element,attrs){
+                // 是否改变element初始化高
                 if(!!attrs.height){
                     element[0].style.height=attrs.height+"px";
                 }
@@ -369,15 +370,26 @@ angular.module('starter.directives',[])
                 attrs.$observe("echartsinit", function (value) {
                     if(value.length>0){
                         scope.newAttrs = JSON.parse(value);
-                        Init(scope.newAttrs);
-                    }                    
+                        if(!!scope.newAttrs.opt){
+                            Init(scope.newAttrs);
+                        }
+                    }
                 });
 
                 function Init(arg){
                     var myChart = echarts.init(element[0]);
-                    // 使用刚指定的配置项和数据显示图表。
-                    myChart.setOption(arg);
+                    // 是否显示隐藏loading
+                    if(arg.loaded===false){
+                        myChart.showLoading();
+                    }
+                    if(arg.loaded===true){
+                        myChart.hideLoading();
+                    }
+                    myChart.setOption(arg.opt);
                 }
             }
         }
+       
+        // <bbg-echarts echartsinit={{someScope}} height="350"></bbg-echarts> 【someScope:{opt:null,loaded:null}，height：绑定高度】
+        // opt 为echarts的option 【echarts.init(option)】，loaded：null 【不开启动画】false与true显示隐藏动画
     })
