@@ -343,12 +343,10 @@ angular.module('starter.controllers').controller('EchartsCtrl', function ($scope
                 data: [2, 3, 4, 1, 6]
             }],
         };
-
-
-        lineDate(arg)
+        treeDate(arg)
     }
 
-    function lineDate(arg) {
+    function treeDate(arg) {
         $scope.echartsTree = angular.extend(angular.copy(arg),{ loaded: false });
         $http.get('css/flare.json').then(function (result) {
             var data = result.data;
