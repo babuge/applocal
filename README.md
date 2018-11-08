@@ -6,6 +6,7 @@ angularjs、ionic、cordova
   
 ### install
   node 6.11.0，cordova@6.0，ionic@2.2.3
+  npm install
   run： ionic serve
   
   
