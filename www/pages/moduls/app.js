@@ -167,6 +167,17 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
             }
         }
     })
+    .state('tab.openlayer',{
+        url:'/openlayer',
+        cache:'true',
+        views: {
+            'tab-home':{
+                templateUrl: 'pages/home/openlayer/openlayer.html',
+                controller: 'openlayerCtrl',
+                css: 'pages/home/openlayer/openlayer.css'
+            }
+        }
+    })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/tab/home');
 });

@@ -383,6 +383,51 @@ angular.module('starter.services', [])
       maps:maps,
   }
 }])
+.factory('bbghttp',['$http','urlBaseService',function($http, urlBaseService){
+    var urlBase = urlBaseService.maps(1);
+    var post = function(url,data){
+      var url =urlBase + url;
+      if(data===undefined){
+         return $http.post(url)
+      }
+      return $http.post(url,data)
+    },get = function( url ,data) {
+      var url =urlBase + url;
+      if(data===undefined){
+        return $http.post(url)
+     }
+     return $http.post(url,{params:data})
+    },postParams = function(url,data){
+      var url =urlBase + url;
+      if(data===undefined){
+         return $http.post(url)
+      }
+      return $http({
+        url:url,
+        method:"post",
+        params:data
+     })
+    },del = function(url,data){
+      var url =urlBase + url;
+      if(data===undefined){
+         return $http({
+            url:url,
+            method:"delete",
+         })
+      }
+      return $http({
+        url:url,
+        method:'delete',
+        data:data
+      })
+    };
+    return {
+      post:post,
+      get:get,
+      delete:del,
+      postParams:postParams
+    }
+}])
 .factory('Utils',['$ionicPopup',function($ionicPopup){ // 工具集
   var showAlert = function(title,message) {
     var tit = title,msg = message;

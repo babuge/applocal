@@ -61,11 +61,11 @@ angular.module('starter.controllers').controller('HomeCtrl', function($scope,$st
         }],
         pid: 2,
     }, {
-        show: false,
+        show: true,
         items: [{
             show: true,
-            title: '模块三',
-            cssClass: 'icon icon-allow-update',
+            title: 'openlayer',
+            cssClass: 'myIcon bbg-openlayer',
             hasBubble: false,
             id:9,
         }, {show: true,
@@ -117,7 +117,7 @@ angular.module('starter.controllers').controller('HomeCtrl', function($scope,$st
 
     // 跳转事件集
     $scope.gotoModule = function(idx) {
-        if(idx>8 || idx==5){
+        if(idx>9 || idx==5){
             console.log('该模块尚未开发！')
             return;
         }
@@ -132,6 +132,7 @@ angular.module('starter.controllers').controller('HomeCtrl', function($scope,$st
         eventMap.set(6,"tab.rongCloud");
         eventMap.set(7,"tab.ipAddress");
         eventMap.set(8,"tab.echarts");
+        eventMap.set(9,"tab.openlayer");
         angular.forEach(eventMap,function(item,index,map){
             if(index===idx){
                 goToFuntion(item);

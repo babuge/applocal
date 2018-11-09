@@ -67,6 +67,9 @@
 .myIcon.bbg-popup::before{
     background-image: url("../../img/warning.png");
 }
+.myIcon.bbg-openlayer::before{
+    background-image: url("../../img/openlayer.png");
+}
 /* 自定义loading */
 
 .bbgBackDrop {
